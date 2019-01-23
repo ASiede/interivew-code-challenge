@@ -13,8 +13,12 @@ describe('invertedArrayMode', () => {
 		'red.js'
 		]
   	}
+  	// Testing equality of individual element in array
+    expect(invertedArrayMode(testCase.input)[0])
+      .toBe(testCase.expected[0])
+    // Testing equality of array  
     expect(invertedArrayMode(testCase.input))
-      .toBe(testCase.expected)
+      .toEqual(testCase.expected)  
   })
 
   it('should invert the list and append .test.js in dev mode', () => {
@@ -29,7 +33,11 @@ describe('invertedArrayMode', () => {
 		'red.test.js'
 		]
   	}
-    expect(invertedArrayMode())
-      .toBe(testCase.expected)
+  	// Testing equality of individual element in array
+    expect(invertedArrayMode(testCase.input)[0])
+      .toBe(testCase.expected[0])
+    // Testing equality of array  
+    expect(invertedArrayMode(testCase.input))
+      .toEqual(testCase.expected)  
   })
 })
